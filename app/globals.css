@@ -94,3 +94,53 @@ html,body{max-width:100%;overflow-x:clip}
  .app-content .hero h1{font-size:28px}
  .app-content .card .actions{flex-direction:column}
 }
+
+/* Arena redesign: visual density, stronger cards, genuine mobile menu */
+.mobile-top{display:none}
+body{background:radial-gradient(ellipse at 75% -5%,#32175e 0%,transparent 40%),#080913}
+.hero{background:radial-gradient(ellipse at 90% 35%,#7134e666,transparent 40%),linear-gradient(112deg,#101126,#171035 66%,#201342);border-color:#7446b2;box-shadow:0 24px 80px #03020c90,inset 0 0 75px #a44dff15}
+.hero h1{font-weight:700;letter-spacing:-2.3px;max-width:600px}
+.hero p{max-width:535px}
+.hero-art{display:flex;align-items:center;justify-content:center;width:240px;height:240px;top:20%;right:6%;font-size:unset;transform:none;animation:none;filter:none;opacity:1}
+.hero-orbit{position:absolute;inset:4px;display:grid;place-items:center;border:1px solid #ad80ff70;border-radius:32px;transform:rotate(25deg);font-size:90px;color:#8553eb70;box-shadow:0 0 80px #a25aff50,inset 0 0 80px #9b4eff25}
+.hero-cross{position:relative;font-size:125px;filter:drop-shadow(0 15px 24px #07040c);animation:floaty 5s ease-in-out infinite}
+.hero-fps{position:absolute;bottom:-8px;right:-5px;background:#121125;border:1px solid #674d9c;padding:10px 13px;border-radius:9px;color:#d4bfff;font:800 13px 'Space Grotesk';box-shadow:0 8px 25px #0008}.hero-fps i{color:#65edb5;font-size:9px;font-style:normal;margin-left:8px}
+.eyebrow{background:#6f36ce2b;border-color:#9b5bff70;color:#d3b9ff}
+.hero .primary{background:linear-gradient(105deg,#a63dff,#6849fa);box-shadow:0 10px 35px #8b42ff50}
+.card{position:relative;overflow:hidden;border:1px solid #363154;background:linear-gradient(165deg,#1c1a32 0%,#101421 75%);box-shadow:0 12px 34px #0004}
+.card:before{content:'';position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#a363ff,#5546e9,transparent);opacity:.8}
+.card-logo{height:114px;background:radial-gradient(ellipse at 50% 35%,#5e32b24a,transparent 72%);overflow:hidden}
+.card-logo-backdrop{position:absolute;font-size:100px;opacity:.045;transform:rotate(-18deg) translate(80px,-10px);color:#d4b9ff}
+.emblem{position:relative;z-index:1;transform:rotate(-7deg);border:1px solid #ffffff4a;box-shadow:0 14px 28px #0009,0 0 40px #a67aff22}
+.card-subtitle{font-size:9px;letter-spacing:1.4px;font-weight:800;color:#b491ff;margin-top:-8px}
+.card h3{font-size:22px}
+.card p{min-height:50px}
+.card .actions .btn.primary{background:linear-gradient(110deg,#8e43ef,#6448f0)}
+.card .tag.green{background:#153a32;color:#8ef2c5}
+.card .heart{background:#231d38}
+.app-content .metric{border-color:#343050}
+@media(max-width:800px){
+ .mobile-top{position:sticky;top:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:10px;height:65px;padding:0 15px;background:#0b0d19f5;backdrop-filter:blur(14px);border-bottom:1px solid #393052}
+ .mobile-logo{display:flex;align-items:center;gap:9px;font:700 15px 'Space Grotesk';white-space:nowrap}.mobile-logo b{color:#b98aff}.mobile-logo .brand-icon{height:32px;width:32px;font-size:16px}
+ .mobile-menu-btn{border:1px solid #654596;background:#211a38;color:#f2e9ff;padding:10px 14px;border-radius:10px;font-size:12px;font-weight:800}
+ .side-nav{display:none!important}
+ .side-nav.mobile-open{display:grid!important;position:relative;grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:7px;background:#10101f;border-bottom:1px solid #49386c;height:auto;overflow:visible}
+ .side-nav.mobile-open .side-brand,.side-nav.mobile-open .side-label,.side-nav.mobile-open .side-bottom{display:none}
+ .side-nav.mobile-open .side-link{min-height:43px;flex-direction:row;font-size:12px;text-align:left;padding:9px 12px;gap:9px}
+ .side-nav.mobile-open .side-link span{overflow-wrap:normal}
+ .app-content .hero{margin-top:13px;padding:29px 22px 31px;min-height:0}
+ .app-content .hero h1{font-size:clamp(32px,7vw,43px);letter-spacing:-1.3px;margin:16px 0 12px}
+ .app-content .hero-art{display:none}
+ .app-content .hero p{font-size:13px}
+ .app-content .hero-actions{margin-top:19px}
+ .app-content .metrics{margin-top:11px}
+ .app-content .card-logo{height:95px}
+}
+@media(max-width:580px){
+ .app-content .hero h1{font-size:35px}
+ .app-content .hero-actions{grid-template-columns:1fr 1fr}
+ .app-content .hero-actions .btn{font-size:11px;padding:12px 7px}
+ .app-content .card-logo{height:105px}
+ .app-content .card p{min-height:0}
+}
+@media(min-width:801px) and (max-width:1100px){.hero-art{opacity:.25;right:1%}}
