@@ -1,0 +1,1 @@
+import type {Metadata} from 'next';import './globals.css';export const metadata:Metadata={title:'PvP Client Hub | Minecraft 1.8.9',description:'Catálogo de clientes e mods PvP Minecraft Java 1.8.9, links oficiais, guias Linux e comparação.'};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="pt-BR"><body>{children}</body></html>}
