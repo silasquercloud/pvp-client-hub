@@ -144,3 +144,76 @@ body{background:radial-gradient(ellipse at 75% -5%,#32175e 0%,transparent 40%),#
  .app-content .card p{min-height:0}
 }
 @media(min-width:801px) and (max-width:1100px){.hero-art{opacity:.25;right:1%}}
+
+/* Catalog-first layout inspired by mobile storefront patterns */
+.bottom-nav{display:none}
+@media(min-width:801px){
+ .side-nav{display:none!important}
+ .app-content .topbar{display:flex}
+ .app-content .topbar .brand{display:flex}
+ .app-content .shell{max-width:1380px;padding:0 34px}
+ .app-content .topbar{margin:0 -34px;padding:0 34px}
+ .app-content .nav{display:flex}
+ .app-content .hero{min-height:310px;padding:43px 48px}
+ .app-content .hero h1{font-size:clamp(35px,3.6vw,51px);max-width:650px}
+ .app-content .hero-art{right:11%;top:12%;transform:scale(.78)}
+ .app-content .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+ .app-content .card-logo{height:132px}
+ .app-content .card{padding:16px}
+ .app-content .card .actions{flex-direction:column}
+ .app-content .card .actions .btn{width:100%}
+ .app-content .card h3{font-size:19px}
+ .app-content .metrics{grid-template-columns:repeat(3,1fr);margin:14px 0 32px}
+}
+@media(min-width:801px) and (max-width:1150px){
+ .app-content .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .app-content .hero-art{opacity:.35}
+}
+@media(max-width:800px){
+ .mobile-top{height:64px;padding:0 15px}
+ .mobile-menu-btn{display:none}
+ .side-nav,.side-nav.mobile-open{display:none!important}
+ .bottom-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;bottom:0;left:0;right:0;z-index:80;background:#121821f7;border-top:1px solid #384247;padding:8px 5px calc(9px + env(safe-area-inset-bottom));box-shadow:0 -12px 35px #0008;backdrop-filter:blur(15px)}
+ .bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10px;font-weight:800;color:#a0a9b6;padding:5px 0;min-height:45px}
+ .bottom-nav a span{font-size:24px;line-height:1.1;color:#9da9b5}
+ .bottom-nav a:focus,.bottom-nav a:hover{color:#ac80ff}
+ .bottom-nav a:focus span,.bottom-nav a:hover span{color:#ad81ff}
+ .app-content .shell{padding:0 13px}
+ .app-content .hero{padding:23px 20px 24px;min-height:0;border-radius:18px;margin-top:13px}
+ .app-content .hero h1{font-size:clamp(26px,6.6vw,37px);line-height:1.14;margin:13px 0 10px}
+ .app-content .hero p{font-size:12px;line-height:1.55}
+ .app-content .hero .eyebrow{font-size:9px;letter-spacing:.5px;padding:7px 9px}
+ .app-content .hero-actions{grid-template-columns:1fr 1fr;margin-top:16px}
+ .app-content .hero-actions .btn{font-size:10px;padding:10px 7px}
+ .app-content .metrics{display:none}
+ .app-content .section-heading{margin:25px 0 14px}
+ .app-content .section-heading h2{font-size:23px}
+ .app-content .section-heading p{font-size:11px}
+ .app-content .toolbar{margin:12px 0}
+ .app-content .filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .app-content .filters input{grid-column:1/-1}
+ .app-content .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .app-content .card{padding:10px;gap:9px;border-radius:16px}
+ .app-content .card-top{min-height:24px}
+ .app-content .tag{font-size:8px;padding:5px 6px}
+ .app-content .heart{width:26px;height:26px;font-size:15px}
+ .app-content .card-logo{height:auto;aspect-ratio:1.1;background:radial-gradient(circle at center,#5c39935a,#151627 70%);border:1px solid #403052;border-radius:12px}
+ .app-content .emblem{height:65px;width:65px;font-size:31px}
+ .app-content .card h3{font-size:15px;line-height:1.2}
+ .app-content .card-subtitle{font-size:8px;letter-spacing:.7px;margin-top:-5px}
+ .app-content .card p{font-size:10px;line-height:1.5;min-height:60px}
+ .app-content .features{gap:4px}
+ .app-content .feature{font-size:8px;padding:4px 5px}
+ .app-content .compat{flex-direction:column;gap:3px;font-size:9px}
+ .app-content .card .actions{flex-direction:column;gap:6px}
+ .app-content .card .actions .btn{width:100%;font-size:10px;padding:9px 5px}
+ .app-content .guide-grid{grid-template-columns:1fr}
+ .app-content footer{padding-bottom:105px}
+ .app-content .tablewrap{max-width:100%}
+}
+@media(max-width:370px){
+ .app-content .hero h1{font-size:26px}
+ .app-content .grid{gap:7px}
+ .app-content .card{padding:8px}
+ .app-content .emblem{width:54px;height:54px}
+}
