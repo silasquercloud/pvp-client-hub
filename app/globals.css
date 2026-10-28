@@ -18,3 +18,20 @@ body{background:radial-gradient(ellipse 75% 32% at 50% -8%,#38215e70,transparent
 .types-section{margin-top:45px}
 .guide{background:linear-gradient(145deg,#17172b,#101626);border-color:#3b345b}
 @media(max-width:650px){.topbar{margin:0 -16px;padding:0 16px}.hero-art{font-size:100px;right:2%;opacity:.24}.hero:after{display:none}}
+
+/* Dashboard layout with persistent left navigation */
+.app-shell{display:flex;min-height:100vh;align-items:stretch}
+.side-nav{width:242px;min-width:242px;position:sticky;top:0;height:100vh;padding:27px 15px 18px;background:linear-gradient(180deg,#111023,#0b0e19 65%);border-right:1px solid #34304d;display:flex;flex-direction:column;z-index:30}
+.side-brand{display:flex;align-items:center;gap:10px;font:700 16px 'Space Grotesk';padding:0 9px 31px;white-space:nowrap}.side-brand b{color:#ad86ff}
+.side-label{font-size:10px;letter-spacing:1.6px;color:#777e9c;font-weight:800;padding:22px 14px 10px}
+.side-link{display:flex;align-items:center;gap:13px;padding:12px 14px;border-radius:10px;color:#a7aec5;font-weight:700;font-size:13px;transition:.2s}.side-link:first-letter{color:#ae87ff}.side-link:hover,.side-link.active{background:linear-gradient(90deg,#7146d74a,#7146d710);color:#fff}.side-link.active{border-left:3px solid #a66bff}.side-link small{margin-left:auto;background:#2b2546;color:#c3b0ff;border-radius:7px;padding:3px 7px}
+.side-bottom{margin-top:auto;border-top:1px solid #29283d;padding:19px 8px 0}.side-version{border:1px solid #493b73;border-radius:10px;background:#241c3e;padding:12px;color:#d1bcff;font-size:12px}.side-version b{color:#fff}.side-bottom p{color:#767f9d;font-size:10px;text-align:center}
+.app-content{min-width:0;flex:1}.app-content .shell{max-width:1400px;padding:0 33px}
+.app-content .topbar{margin:0 -33px;padding:0 33px;height:69px}.app-content .topbar .brand{display:none}
+.header-search{font-size:12px;letter-spacing:1.5px;font-weight:800;color:#c5b0ff}.header-search span{color:#737e99}
+.app-content .hero{margin-top:25px;min-height:375px;padding:55px 45px}.app-content .hero h1{font-size:clamp(35px,4vw,56px)}.app-content .hero-art{font-size:145px;right:7%}
+.app-content .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.app-content .card{border-radius:15px}
+@media(max-width:1180px){.side-nav{width:204px;min-width:204px}.app-content .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.app-shell{display:block}.side-nav{position:sticky;top:0;width:100%;height:auto;min-width:0;display:flex;flex-direction:row;overflow-x:auto;gap:4px;align-items:center;padding:9px 12px;scrollbar-width:none}.side-nav::-webkit-scrollbar{display:none}.side-brand{padding:0 14px 0 0;font-size:12px}.side-brand .brand-icon{width:28px;height:28px;font-size:14px}.side-label,.side-bottom{display:none}.side-link{white-space:nowrap;font-size:12px;padding:9px 12px}.side-link small{display:none}.app-content .topbar{display:none}.app-content .shell{padding:0 16px}.app-content .hero{padding:38px 24px}.app-content .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.app-content .grid{grid-template-columns:1fr}.app-content .hero h1{font-size:35px}.app-content .hero{min-height:350px}.app-content .hero-art{opacity:.17}.app-content .card-logo{height:82px}}
