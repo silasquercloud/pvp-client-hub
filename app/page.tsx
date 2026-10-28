@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import Link from 'next/link';
 type Item={id:string;name:string;type:'Launcher'|'Forge mod'|'Pendente';linux:boolean|null;format:string;status:string;features:string[];url:string|null;description:string};
-export const items:Item[]=[
+const items:Item[]=[
 {id:'lunar',name:'Lunar Client',type:'Launcher',linux:true,format:'AppImage / instalador',status:'Ativo',features:['HUD','PvP','Personalização'],url:'https://www.lunarclient.com/download',description:'Cliente PvP multiplataforma; escolha a versão 1.8.9 no launcher.'},
 {id:'forge',name:'Minecraft Forge 1.8.9',type:'Launcher',linux:true,format:'Instalador Java .jar',status:'Legado',features:['Mods','Forge'],url:'https://files.minecraftforge.net/net/minecraftforge/forge/index_1.8.9.html',description:'Carregador de mods 1.8.9. O instalador não deve ser colocado na pasta mods.'},
 {id:'patcher',name:'Patcher (Sk1er)',type:'Forge mod',linux:true,format:'Mod .jar',status:'Não confirmado',features:['Otimização','Correções'],url:'https://github.com/Sk1erLLC/Patcher',description:'Correções e ajustes; verifique a versão 1.8.9 na fonte antes de instalar.'},
