@@ -217,3 +217,13 @@ body{background:radial-gradient(ellipse at 75% -5%,#32175e 0%,transparent 40%),#
  .app-content .card{padding:8px}
  .app-content .emblem{width:54px;height:54px}
 }
+
+/* Logo treatment: genuine site favicon with safe fallback */
+.client-logo{width:78px;height:78px;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 12px 18px #0009);border-radius:17px}
+.emblem-fallback{display:none}
+.emblem-fallback.emblem-visible{display:grid}
+.card-logo{background:radial-gradient(circle at 50% 45%,#6948ab42,transparent 75%),linear-gradient(145deg,#181a2d,#11131e);border-color:#4a3b62}
+.card{border-color:#383447}
+.card:hover .client-logo{transform:scale(1.08);transition:transform .22s}
+@media(max-width:800px){.client-logo{width:67px;height:67px}}
+@media(max-width:400px){.client-logo{width:57px;height:57px}}
